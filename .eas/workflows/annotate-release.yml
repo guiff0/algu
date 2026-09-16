@@ -1,0 +1,18 @@
+name: Annotate release in PostHog
+
+on:
+  push:
+    branches: ['main']
+
+jobs:
+  publish:
+    type: update
+    params:
+      branch: main
+
+  annotate:
+    needs: [publish]
+    steps:
+      - uses: eas/posthog_annotation
+        with:
+          content: Published update for runtime ${{ fromJSON(needs.publish.outputs.updates_json || '[]')[0].runtimeVersion }} to main

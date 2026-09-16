@@ -1,0 +1,47 @@
+name: Channel rollout that widens or reverts
+
+on:
+  push:
+    branches: ['main']
+
+jobs:
+  publish:
+    type: update
+    params:
+      branch: rollout
+
+  start_rollout:
+    needs: [publish]
+    steps:
+      - run: npx eas-cli@latest channel:rollout production --action create --branch rollout --percent 10 --runtime-version 1.0.0 --non-interactive
+
+  error_gate:
+    needs: [start_rollout]
+    steps:
+      - id: gate
+        uses: eas/posthog_wait_for_metric
+        with:
+          query: SELECT count() FROM events WHERE event = '$exception' AND timestamp > now() - INTERVAL 15 MINUTE
+          operator: lt
+          threshold: 10
+          interval_seconds: 60
+          timeout_seconds: 900
+      - uses: eas/posthog_capture_event
+        with:
+          event: channel_rollout_cleared
+          properties:
+            eas/account: ${{ account.name }}
+            eas/project_id: ${{ app.id }}
+            eas/workflow_id: ${{ workflow.id }}
+            error_count: ${{ steps.gate.outputs.value }}
+
+  widen:
+    needs: [error_gate]
+    steps:
+      - run: npx eas-cli@latest channel:rollout production --action end --outcome republish-and-revert --non-interactive
+
+  revert:
+    after: [error_gate]
+    if: ${{ failure() }}
+    steps:
+      - run: npx eas-cli@latest channel:rollout production --action end --outcome revert --non-interactive

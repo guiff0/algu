@@ -37,7 +37,7 @@ export async function submitApplication(input: ApplicationInput): Promise<{ id: 
       application.resumeUri = input.resumeUri ?? ""
       application.resumePath = ""
       application.uploadStatus = "pending"
-      application.syncStatus = "pending"
+      application.recordSyncStatus = "pending"
       application.submittedAt = new Date().toISOString()
     })
     recordId = record.id
@@ -79,7 +79,7 @@ export async function pushPendingApplications(): Promise<void> {
 
       await database.write(async () => {
         await record.update((application) => {
-          application.syncStatus = "synced"
+          application.recordSyncStatus = "synced"
           application.resumePath = resumePath ?? ""
           application.uploadStatus = uploadStatus
         })
@@ -87,7 +87,7 @@ export async function pushPendingApplications(): Promise<void> {
     } catch {
       await database.write(async () => {
         await record.update((application) => {
-          application.syncStatus = "failed"
+          application.recordSyncStatus = "failed"
         })
       })
     }

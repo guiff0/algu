@@ -1,9 +1,11 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
+    "module": "commonjs",
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
     "jsx": "react-native",
     "customConditions": [
       "react-native"
@@ -44,7 +46,7 @@
   "include": [
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "app.config.js"  ],
   "exclude": [
     "node_modules",
     "test/**/*"

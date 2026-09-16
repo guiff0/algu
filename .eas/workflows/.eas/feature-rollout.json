@@ -1,0 +1,4 @@
+{
+  "flag": "new-checkout",
+  "rollout_percentage": 10
+}

@@ -1,0 +1,32 @@
+name: Apply the feature rollout from the repo
+
+on:
+  push:
+    branches: ['main']
+    paths: ['.eas/feature-rollout.json']
+
+jobs:
+  publish:
+    type: update
+    params:
+      branch: main
+
+  read_rollout:
+    outputs:
+      flag: ${{ steps.rollout.outputs.flag }}
+      percent: ${{ steps.rollout.outputs.percent }}
+    steps:
+      - uses: eas/checkout
+      - id: rollout
+        run: |
+          set-output flag "$(node -p "require('./.eas/feature-rollout.json').flag")"
+          set-output percent "$(node -p "require('./.eas/feature-rollout.json').rollout_percentage")"
+
+  apply_rollout:
+    needs: [publish, read_rollout]
+    steps:
+      - uses: eas/posthog_flag_rollout
+        with:
+          flag: ${{ needs.read_rollout.outputs.flag }}
+          active: true
+          rollout_percentage: ${{ needs.read_rollout.outputs.percent }}

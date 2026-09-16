@@ -1,0 +1,48 @@
+name: Canary rollout that rolls forward or back
+
+on:
+  push:
+    branches: ['main']
+
+jobs:
+  publish:
+    type: update
+    params:
+      branch: main
+
+  canary:
+    needs: [publish]
+    steps:
+      - uses: eas/posthog_flag_rollout
+        with:
+          flag: new-checkout
+          active: true
+          rollout_percentage: 25
+
+  error_gate:
+    needs: [canary]
+    steps:
+      - uses: eas/posthog_wait_for_metric
+        with:
+          query: SELECT count() FROM events WHERE event = '$exception' AND timestamp > now() - INTERVAL 30 MINUTE
+          operator: lte
+          threshold: 5
+          interval_seconds: 60
+          timeout_seconds: 1800
+
+  full_rollout:
+    needs: [error_gate]
+    steps:
+      - uses: eas/posthog_flag_rollout
+        with:
+          flag: new-checkout
+          rollout_percentage: 100
+
+  roll_back:
+    after: [error_gate]
+    if: ${{ failure() }}
+    steps:
+      - uses: eas/posthog_flag_rollout
+        with:
+          flag: new-checkout
+          active: false

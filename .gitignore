@@ -1,6 +1,7 @@
 # OSX
 #
 .DS_Store
+.expo/
 
 # Xcode
 #
@@ -80,6 +81,9 @@ npm-debug.*
 *.key
 *.mobileprovision
 *.orig.*
+*service-account*.json
+*play-store*.json
+pc-api-key*.json
 web-build/
 
 # Configurations

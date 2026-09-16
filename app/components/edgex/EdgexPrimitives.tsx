@@ -142,7 +142,7 @@ export function EdgexPrimaryButton({
   text: string
   onPress: () => void
   fontFamily: string
-  style?: ViewStyle
+  style?: TextStyle
   disabled?: boolean
 }) {
   return (

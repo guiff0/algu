@@ -1,9 +1,16 @@
 /* eslint-env node */
 // Learn more https://docs.expo.io/guides/customizing-metro
-const { getDefaultConfig } = require("expo/metro-config")
+//import { getDefaultConfig } from 'expo/metro-config';
 
-/** @type {import('expo/metro-config').MetroConfig} */
-const config = getDefaultConfig(__dirname)
+//const config = getDefaultConfig(__dirname);
+
+//export default config;
+//const { getDefaultConfig } = require('expo/metro-config');
+const { getDefaultConfig } = require('expo/metro-config');
+
+const config = getDefaultConfig(__dirname);
+
+module.exports = config;
 
 config.transformer.getTransformOptions = async () => ({
   transform: {

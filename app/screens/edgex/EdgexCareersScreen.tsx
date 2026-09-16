@@ -389,7 +389,7 @@ export const EdgexCareersScreen: FC<EdgexCareersScreenProps> = function EdgexCar
               />
               <EdgexPrimaryButton
                 text="Request a Consultation →"
-                onPress={() => navigation.navigate("EdgexContact")}
+                onPress={() => navigation.navigate("EdgexContact", { pageKey: "contact" })}
                 fontFamily={typography.primary.medium}
               />
             </View>

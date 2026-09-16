@@ -12,6 +12,6 @@ export class ApplicationModel extends Model {
   @text("resume_uri") resumeUri: string
   @text("resume_path") resumePath: string
   @text("upload_status") uploadStatus: string
-  @text("sync_status") syncStatus: string
+  @text("sync_status") recordSyncStatus: string
   @text("submitted_at") submittedAt: string
 }

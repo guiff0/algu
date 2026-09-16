@@ -21,7 +21,10 @@ npm run build:ios:sim # build for ios simulator
 npm run build:ios:device # build for ios device
 npm run build:ios:prod # build for ios device
 ```
-
+eas workflow:run .eas/workflows/create-development-builds.yml
+eas workflow:run .eas/workflows/e2e-test-android.yml
+eas build --platform android --auto-submit
+eas submit --platform android --profile production
 ### `./assets`
 
 This directory is designed to organize and store various assets, making it easy for you to manage and use them in your application. The assets are further categorized into subdirectories, including `icons` and `images`:

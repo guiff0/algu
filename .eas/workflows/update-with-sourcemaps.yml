@@ -1,0 +1,15 @@
+name: Publish update with source maps
+
+on:
+  push:
+    branches: ['main']
+
+jobs:
+  publish_update:
+    steps:
+      - uses: eas/checkout
+      - uses: eas/install_node_modules
+      - run: npx eas-cli@latest update --branch main --platform android --auto --non-interactive
+      - uses: eas/posthog_upload_sourcemaps
+        with:
+          directory: dist

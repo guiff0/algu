@@ -11,7 +11,7 @@ import {
 import { EdgexIllustration, type EdgexIllustrationVariant } from "@/components/edgex/EdgexIllustration"
 import { EdgexScreenShell } from "@/components/edgex/EdgexScreenShell"
 import { PAGES } from "@/content/edgexContent"
-import type { EdgexStackScreenProps } from "@/navigators/edgexNavigationTypes"
+import type { AppStackScreenProps } from "@/navigators/navigationTypes"
 import { useAppTheme } from "@/theme/context"
 import { edgex } from "@/theme/edgexPalette"
 
@@ -33,23 +33,7 @@ const PAGE_KEY_TO_ILLUSTRATION: Record<string, EdgexIllustrationVariant> = {
   newsroom: "newsroom",
 }
 
-interface QuantomScreenProps extends EdgexStackScreenProps<
-  | "EdgexProducts"
-  | "EdgexServices"
-  | "EdgexTechnologies"
-  | "EdgexIndustries"
-  | "EdgexDepartments"
-  | "EdgexAbout"
-  | "EdgexContact"
-  | "EdgexLeadership"
-  | "EdgexLegal"
-  | "EdgexGovernance"
-  | "EdgexDocumentation"
-  | "EdgexApiAccess"
-  | "EdgexWhitepapers"
-  | "EdgexCaseStudies"
-  | "EdgexNewsroom"
-> {}
+interface QuantomScreenProps extends AppStackScreenProps<"Quantom"> {}
 
 export const QuantomScreen: FC<QuantomScreenProps> = function QuantomScreen({
   route,

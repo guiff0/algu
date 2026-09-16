@@ -1,6 +1,11 @@
 import { Image, View } from "react-native"
 
-import type { IllustrationKey } from "@/content/edgexContent"
+export type IllustrationKey =
+  | "hero-reactor-core"
+  | "circuit-lattice"
+  | "molecular-quantum"
+  | "reactor-containment"
+  | "data-grid"
 import { edgex } from "@/theme/edgexPalette"
 
 // Static requires — Metro needs literal paths, so this lookup map (not a

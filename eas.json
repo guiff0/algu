@@ -32,9 +32,28 @@
       "extends": "preview",
       "ios": { "simulator": false }
     },
-    "production": {}
+       
+    "production": {
+      "android": {
+    
+        "buildType": "app-bundle"
+      }
+    }
   },
   "submit": {
-    "production": {}
+    "production": {
+      "android": {
+        "serviceAccountKeyPath": "./google-service-account.json",
+        "track": "production",
+        "releaseStatus": "completed"
+      }
+    },
+    "internal": {
+      "android": {
+        "serviceAccountKeyPath": "./google-service-account.json",
+        "track": "internal",
+        "releaseStatus": "completed"
+      }
+    }
   }
 }
