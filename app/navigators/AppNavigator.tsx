@@ -11,12 +11,11 @@ import Config from "@/config"
 import { useAuth } from "@/context/AuthContext"
 import { ErrorBoundary } from "@/screens/ErrorScreen/ErrorBoundary"
 import { LoginScreen } from "@/screens/LoginScreen"
-import { QuantomScreen } from "@/screens/QuantomScreen"
 import { WelcomeScreen } from "@/screens/WelcomeScreen"
 import { useAppTheme } from "@/theme/context"
 
 import { DemoNavigator } from "./DemoNavigator"
-import { EdgexNavigator } from "./EdgexNavigator"
+import { alguNavigator } from "./alguNavigator"
 import type { AppStackParamList, NavigationProps } from "./navigationTypes"
 import { navigationRef, useBackButtonHandler } from "./navigationUtilities"
 
@@ -45,11 +44,9 @@ const AppStack = () => {
           backgroundColor: colors.background,
         },
       }}
-      initialRouteName="Edgex"
+      initialRouteName="algu"
     >
-      <Stack.Screen name="Quantom" component={QuantomScreen} />
-
-      <Stack.Screen name="Edgex" component={EdgexNavigator} />
+      <Stack.Screen name="algu" component={alguNavigator} />
 
       {isAuthenticated ? (
         <>

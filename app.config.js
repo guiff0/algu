@@ -1,8 +1,9 @@
 /** @type {import('@expo/config').ExpoConfig} */
 module.exports = {
   expo: {
+    owner: "guiffos-team",
     name: "Quantum",
-    slug: "quantum",
+    slug: "algu",
     version: "1.0.0",
     orientation: "portrait",
 
@@ -18,12 +19,12 @@ module.exports = {
 
     ios: {
       supportsTablet: false,
-      bundleIdentifier: "com.edgex.quantum.app",
+      bundleIdentifier: "com.algu.quantum.app",
       buildNumber: "1"
     },
 
     android: {
-      package: "com.edgex.quantum.app",
+      package: "com.algu.quantum.app",
       versionCode: 1,
       adaptiveIcon: {
         foregroundImage: "./assets/adaptive-icon.png",
@@ -31,9 +32,18 @@ module.exports = {
       }
     },
 
+    web: {
+      bundler: "metro",
+      name: "ALGU Co. | Quantum, AI & Cybersecurity Engineering for Government",
+      shortName: "ALGU Co.",
+      description:
+        "ALGU Co. delivers quantum, AI, cybersecurity, software, and hardware engineering to federal, state, and local government.",
+      lang: "en",
+    },
+
     extra: {
       eas: {
-        projectId: "de399ece-1bb1-4fa4-849e-d7e4fb4bdbd3"
+        projectId: "f33b4a72-7983-4f0b-89cb-799ebb7caed8"
       }
     }
   }

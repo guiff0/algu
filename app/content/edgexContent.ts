@@ -13,16 +13,16 @@ export type ContentPage = {
 }
 
 export const TOP_NAV = [
-  { label: "Home", route: "EdgexHome" as const },
-  { label: "Products", route: "EdgexProducts" as const },
-  { label: "Services", route: "EdgexServices" as const },
-  { label: "Learn", route: "EdgexLearn" as const },
-  { label: "Technologies", route: "EdgexTechnologies" as const },
-  { label: "Industries", route: "EdgexIndustries" as const },
-  { label: "Departments", route: "EdgexDepartments" as const },
-  { label: "About Us", route: "EdgexAbout" as const },
-  { label: "Careers", route: "EdgexCareers" as const },
-  { label: "Contact Us", route: "EdgexContact" as const },
+  { label: "Home", route: "alguHome" as const },
+  { label: "Products", route: "alguProducts" as const },
+  { label: "Services", route: "alguServices" as const },
+  { label: "Learn", route: "alguLearn" as const },
+  { label: "Technologies", route: "alguTechnologies" as const },
+  { label: "Industries", route: "alguIndustries" as const },
+  { label: "Departments", route: "alguDepartments" as const },
+  { label: "About Us", route: "alguAbout" as const },
+  { label: "Careers", route: "alguCareers" as const },
+  { label: "Contact Us", route: "alguContact" as const },
 ]
 
 export const LEFT_MENU = [
@@ -30,22 +30,22 @@ export const LEFT_MENU = [
   { label: "Quantum Optimization", pageKey: "services", anchor: "Quantum Optimization" },
   { label: "Quantum Simulation", pageKey: "services", anchor: "Quantum Simulation" },
   { label: "Quantum Security", pageKey: "services", anchor: "Quantum Security" },
-  { label: "QPU Design", pageKey: "products", anchor: "EDGEX QPU Series" },
+  { label: "QPU Design", pageKey: "products", anchor: "algu QPU Series" },
   { label: "QPU Manufacturing", pageKey: "services", anchor: "QPU Custom Engineering" },
-  { label: "Cryogenic Systems", pageKey: "products", anchor: "EDGEX Cryogenic Control Systems" },
+  { label: "Cryogenic Systems", pageKey: "products", anchor: "algu Cryogenic Control Systems" },
   { label: "Quantum Cloud Integration", pageKey: "services", anchor: "Quantum Cloud Integration" },
-  { label: "Micro-Nuclear Reactor Data Centers", pageKey: "products", anchor: "EDGEX Micro-Nuclear Reactor (MMR) Power Module" },
+  { label: "Micro-Nuclear Reactor Data Centers", pageKey: "products", anchor: "algu Micro-Nuclear Reactor (MMR) Power Module" },
   { label: "Enterprise Architecture", pageKey: "departments", anchor: "Enterprise Solutions Division" },
   { label: "Compliance & Security", pageKey: "departments", anchor: "Corporate Administration" },
 ]
 
 export const HOME_CONTENT = {
-  eyebrow: "QUANTUM INTELLIGENCE FOR THE ENTERPRISE",
-  headline: "Engineering the next era\nof enterprise computation.",
-  body: "EDGEX engineers next-generation quantum systems, QML pipelines, custom QPUs, and nuclear-powered data centers for mission-critical workloads. We build the full stack — software, custom silicon, cryogenics, and the reactor-grade power to run it all — so clients scale past what a shared cloud QPU allocation can support.",
+  eyebrow: "GOVERNMENT TECHNOLOGY SOLUTIONS",
+  headline: "Emerging technology solutions\nfor federal and enterprise missions.",
+  body: "algu develops and delivers advanced technology solutions for federal, state, and local government missions, with emphasis on quantum technologies, artificial intelligence, cybersecurity, IT modernization, software engineering, hardware systems, and managed technology integration. Our public website gives contracting officers, procurement teams, and program leadership a clear view of our company profile, leadership, and core capabilities — and our capabilities statement is available on request for bid review and qualification.",
   subBody:
-    "Five QPU architectures. Seven divisions, from algorithm research to nuclear-powered facility operations. One engagement model: scoped, compliant, and delivered by the division that owns the problem.",
-  contactEmail: "edgex@algu.net",
+    "We support opportunities across quantum computing, AI, cloud, IT infrastructure, enterprise software, hardware integration, and complex systems engineering. The current capabilities statement, company profile, and supporting information are available through the website and by email for government buyers, prime contractors, and contracting officers.",
+  contactEmail: "algu@algu.net",
   highlights: [
     { title: "7", label: "Divisions" },
     { title: "5", label: "QPU Architectures" },
@@ -58,7 +58,7 @@ export const WHY_US = [
   { title: "Power independence", body: "The MMR Power Module removes grid dependency as a scaling constraint — a problem most quantum providers don't own the solution to." },
   { title: "Five QPU architectures", body: "Superconducting, photonic, trapped-ion, spin, and topological — hardware matched to the workload, not the other way around." },
   { title: "Engagement-scoped delivery", body: "Every service runs against a signed statement of work through Enterprise Solutions, not generic self-serve access." },
-  { title: "Quantum-safe by default", body: "Quantum-resistant cryptography applied across client engagements and EDGEX's own infrastructure alike." },
+  { title: "Quantum-safe by default", body: "Quantum-resistant cryptography applied across client engagements and algu's own infrastructure alike." },
   { title: "Seven specialized divisions", body: "From algorithm research to nuclear-powered facility operations — the right team owns each part of an engagement." },
 ]
 
@@ -83,23 +83,23 @@ export const PAGES: Record<string, ContentPage> = {
         layout: "cards",
         items: [
           {
-            title: "EDGEX QML Suite",
+            title: "algu QML Suite",
             body: "Quantum-enhanced machine learning platform for predictive analytics, anomaly detection, and high-dimensional modeling. Ships as a hybrid pipeline: classical preprocessing and orchestration on standard infrastructure, with quantum kernels and variational circuits handling the parts of the workload where they outperform classical methods — pattern recognition in very high-dimensional or highly correlated data.",
           },
           {
-            title: "EDGEX QPU Series",
+            title: "algu QPU Series",
             body: "Custom-engineered Quantum Processing Units across five architectures — Superconducting QPU-X, Photonic QPU-P, Trapped-Ion QPU-I, Spin-Qubit QPU-S, and the fault-tolerant Topological QPU-T — so the underlying hardware can be matched to the workload's coherence, connectivity, and scale requirements instead of forcing every client onto one modality.",
           },
           {
-            title: "EDGEX Cryogenic Control Systems",
+            title: "algu Cryogenic Control Systems",
             body: "Pulse-level control electronics, RF/microwave systems, and cryogenic infrastructure that keep QPUs at operating temperature and drive gate operations with the timing precision quantum algorithms depend on. Sold standalone for clients integrating third-party QPUs, or bundled with the QPU Series.",
           },
           {
-            title: "EDGEX Micro-Nuclear Reactor (MMR) Power Module",
+            title: "algu Micro-Nuclear Reactor (MMR) Power Module",
             body: "A 20–50 MW modular reactor built specifically to power quantum campuses, decoupling mission-critical compute from grid instability. Removes the single largest constraint on scaling a quantum data center: continuous, zero-interruption power at the density cryogenic systems require.",
           },
           {
-            title: "EDGEX Quantum Data Center Platform",
+            title: "algu Quantum Data Center Platform",
             body: "The facility layer that ties everything together — quantum-ready power distribution, cryogenic plant, and high-density compute racks engineered as one integrated system rather than retrofit into a conventional data center.",
           },
         ],
@@ -114,7 +114,7 @@ export const PAGES: Record<string, ContentPage> = {
           },
           {
             title: "Own the full stack, or just a layer",
-            body: "Every product is available standalone. A client running third-party QPUs can still adopt EDGEX's Cryogenic Control Systems or MMR power module without buying into the full portfolio.",
+            body: "Every product is available standalone. A client running third-party QPUs can still adopt algu's Cryogenic Control Systems or MMR power module without buying into the full portfolio.",
           },
         ],
       },
@@ -125,7 +125,7 @@ export const PAGES: Record<string, ContentPage> = {
     kicker: "SERVICES",
     title: "Enterprise Quantum Services",
     intro:
-      "From algorithm design through deployed, compliant infrastructure — EDGEX's services exist to de-risk the gap between 'quantum computing could help here' and a workload actually running in production. Every engagement is scoped by Enterprise Solutions, staffed from the relevant division, and delivered against a signed statement of work.",
+      "From algorithm design through deployed, compliant infrastructure — algu's services exist to de-risk the gap between 'quantum computing could help here' and a workload actually running in production. Every engagement is scoped by Enterprise Solutions, staffed from the relevant division, and delivered against a signed statement of work.",
     sections: [
       {
         heading: "What we run for clients",
@@ -149,7 +149,7 @@ export const PAGES: Record<string, ContentPage> = {
           },
           {
             title: "Quantum Cloud Integration",
-            body: "Azure Quantum, AWS Braket, IBM Quantum, and hybrid HPC + QPU orchestration — for clients who want quantum capability without owning QPU hardware, or who need to burst from an on-prem EDGEX QPU to cloud capacity during peak load.",
+            body: "Azure Quantum, AWS Braket, IBM Quantum, and hybrid HPC + QPU orchestration — for clients who want quantum capability without owning QPU hardware, or who need to burst from an on-prem algu QPU to cloud capacity during peak load.",
           },
           {
             title: "QPU Custom Engineering",
@@ -177,7 +177,7 @@ export const PAGES: Record<string, ContentPage> = {
     kicker: "TECHNOLOGIES",
     title: "Core Technology Stack",
     intro:
-      "The layers underneath every EDGEX engagement, from algorithm to reactor. Each layer is chosen for a specific job in the stack — algorithmic techniques for extracting quantum advantage, cloud integrations for reaching third-party QPUs, and physical infrastructure for running owned hardware at scale.",
+      "The layers underneath every algu engagement, from algorithm to reactor. Each layer is chosen for a specific job in the stack — algorithmic techniques for extracting quantum advantage, cloud integrations for reaching third-party QPUs, and physical infrastructure for running owned hardware at scale.",
     sections: [
       {
         heading: "Algorithms & models",
@@ -186,7 +186,7 @@ export const PAGES: Record<string, ContentPage> = {
           { title: "Quantum Kernels & SVMs", body: "Classical support-vector methods with a quantum-computed kernel, used where the feature space is too high-dimensional for classical kernels to separate efficiently." },
           { title: "Variational Quantum Circuits (VQC)", body: "Parameterized circuits trained with classical optimizers — the workhorse architecture behind most near-term QML and optimization work." },
           { title: "Quantum Neural Networks (QNN)", body: "Circuit-based analogues to classical neural network layers, composed into hybrid quantum-classical models." },
-          { title: "Quantum Approximate Optimization Algorithms (QAOA)", body: "The core algorithm behind EDGEX's optimization service line, mapping combinatorial problems onto near-term hardware." },
+          { title: "Quantum Approximate Optimization Algorithms (QAOA)", body: "The core algorithm behind algu's optimization service line, mapping combinatorial problems onto near-term hardware." },
           { title: "Hybrid Quantum-Classical Transformers", body: "Transformer architectures with quantum-computed attention or embedding layers, used in select QML Suite deployments." },
         ],
       },
@@ -203,9 +203,9 @@ export const PAGES: Record<string, ContentPage> = {
         heading: "Hardware & infrastructure",
         layout: "list",
         items: [
-          { title: "Cryogenic systems (10–20 mK)", body: "The operating temperature range EDGEX's superconducting and spin-qubit QPUs require, maintained by dilution refrigeration." },
+          { title: "Cryogenic systems (10–20 mK)", body: "The operating temperature range algu's superconducting and spin-qubit QPUs require, maintained by dilution refrigeration." },
           { title: "Micro-Nuclear Reactor Systems", body: "20–50 MW modular reactors purpose-built to power cryogenic HPC facilities without grid dependency." },
-          { title: "Quantum-safe cryptography", body: "Post-quantum cryptographic standards implemented across both client-facing security services and EDGEX's own infrastructure." },
+          { title: "Quantum-safe cryptography", body: "Post-quantum cryptographic standards implemented across both client-facing security services and algu's own infrastructure." },
         ],
       },
     ],
@@ -215,10 +215,10 @@ export const PAGES: Record<string, ContentPage> = {
     kicker: "INDUSTRIES",
     title: "Industry Solutions",
     intro:
-      "Domain-specific applications of the same underlying quantum stack. EDGEX doesn't build separate technology per industry — the QML, optimization, simulation, and security service lines are applied to whichever combinatorial, high-dimensional, or cryptographic problem a given industry actually has.",
+      "Domain-specific applications of the same underlying quantum stack. algu doesn't build separate technology per industry — the QML, optimization, simulation, and security service lines are applied to whichever combinatorial, high-dimensional, or cryptographic problem a given industry actually has.",
     sections: [
       {
-        heading: "Where EDGEX operates",
+        heading: "Where algu operates",
         layout: "cards",
         items: [
           {
@@ -283,16 +283,16 @@ export const PAGES: Record<string, ContentPage> = {
   about: {
     key: "about",
     kicker: "ABOUT US",
-    title: "ALGU Co. (DBA EDGEX)",
+    title: "ALGU Co. (DBA algu)",
     intro:
-      "Mission: to engineer quantum systems that transform enterprise intelligence, accelerate computation, and power the next era of technological innovation. ALGU Co. operates under the EDGEX trade name across every product and service line described on this site.",
+      "Mission: to engineer and deliver next-generation technology solutions for government and enterprise customers, with specialization in quantum systems, artificial intelligence, cybersecurity, IT infrastructure, software engineering, and advanced hardware integration. ALGU Co. operates under the algu trade name across every product and service line described on this site, and the public website is designed to give contracting officers, procurement teams, and partners a clear view of the company, capabilities statement, and leadership profile.",
     sections: [
       {
         heading: "Corporate identity",
         layout: "list",
         items: [
           { title: "Company Name", body: "ALGU Co." },
-          { title: "Doing Business As", body: "EDGEX" },
+          { title: "Doing Business As", body: "algu" },
           { title: "Company Number", body: "1617133" },
           { title: "Status", body: "Current Active" },
           { title: "Company Type", body: "Business Corporation – Domestic" },
@@ -300,10 +300,14 @@ export const PAGES: Record<string, ContentPage> = {
           { title: "Registered Address", body: "2321 Dundeen St., Charlotte, NC 28216, United States" },
           { title: "Registered Agent", body: "Guiffo, Alex — 2321 Dundeen St., Charlotte, NC 28216, United States" },
           { title: "Directors / Officers", body: "4 officers on file" },
+          { title: "Public website", body: "https://algu.net — the public-facing company profile for government buyers, contracting officers, and technology partners." },
+          { title: "Capabilities statement", body: "Available on request for procurement, bid review, and partnership conversations; contact algu@algu.net to request the current capabilities brief, core competencies, and supporting documentation." },
+          { title: "Government contracting focus", body: "algu is positioned to support federal, state, and local government opportunities in quantum technologies, AI, cybersecurity, software engineering, enterprise IT, and hardware integration." },
+          { title: "SAM / vendor profile readiness", body: "ALGU Co. maintains a clear company profile with legal identity, leadership, and operating information that supports procurement review and vendor due diligence." },
         ],
       },
       {
-        heading: "What sets EDGEX apart",
+        heading: "What sets algu apart",
         layout: "list",
         items: [
           { title: "Full-stack ownership", body: "Software, custom silicon, cryogenics, and power infrastructure engineered as one system rather than assembled from unrelated vendors." },
@@ -328,7 +332,7 @@ export const PAGES: Record<string, ContentPage> = {
     kicker: "CONTACT US",
     title: "Corporate Contact",
     intro:
-      "edgex@algu.net · 2321 Dundeen St., Charlotte, NC 28216, USA — for engagement inquiries, contact Enterprise Solutions directly; for press, see Newsroom; for technical support on an active engagement, use the contact provided in your statement of work.",
+      "algu@algu.net · https://algu.net · 2321 Dundeen St., Charlotte, NC 28216, USA — for federal, state, and local government opportunities, prime contractor collaboration, and new business inquiries, contact Enterprise Solutions directly. A current capabilities statement is available on request for procurement review, proposal qualification, and contracting conversations.",
     sections: [],
   },
   leadership: {
@@ -365,14 +369,14 @@ export const PAGES: Record<string, ContentPage> = {
     kicker: "COMPANY",
     title: "Legal Information",
     intro:
-      "ALGU Co. is a registered Business Corporation operating under the trade name EDGEX. This page summarizes the entity's registration status and standard legal terms; contact edgex@algu.net for formal documentation requests.",
+      "ALGU Co. is a registered Business Corporation operating under the trade name algu. This page summarizes the entity's registration status and standard legal terms; contact algu@algu.net for formal documentation requests.",
     sections: [
       {
         heading: "Registered entity",
         layout: "list",
         items: [
           { title: "Company Name", body: "ALGU Co." },
-          { title: "Doing Business As", body: "EDGEX" },
+          { title: "Doing Business As", body: "algu" },
           { title: "Company Number", body: "1617133" },
           { title: "Status", body: "Current Active" },
           { title: "Company Type", body: "Business Corporation – Domestic" },
@@ -387,7 +391,7 @@ export const PAGES: Record<string, ContentPage> = {
         items: [
           {
             title: "Use of services",
-            body: "Engagements with ALGU Co./EDGEX are governed by a signed statement of work or master services agreement; no work is performed outside an agreed contract.",
+            body: "Engagements with ALGU Co./algu are governed by a signed statement of work or master services agreement; no work is performed outside an agreed contract.",
           },
           {
             title: "Confidentiality",
@@ -425,13 +429,13 @@ export const PAGES: Record<string, ContentPage> = {
     kicker: "RESOURCES",
     title: "Documentation",
     intro:
-      "Technical documentation for EDGEX platforms and APIs. Full developer docs are provided under active client engagements — reach out at edgex@algu.net for access.",
+      "Technical documentation for algu platforms and APIs. Full developer docs are provided under active client engagements — reach out at algu@algu.net for access.",
     sections: [
       {
         heading: "Documentation areas",
         layout: "cards",
         items: [
-          { title: "EDGEX QML Suite", body: "Pipeline configuration, model deployment, and integration guides." },
+          { title: "algu QML Suite", body: "Pipeline configuration, model deployment, and integration guides." },
           { title: "QPU Series", body: "Device specifications, control electronics interfaces, and calibration procedures." },
           { title: "Quantum Cloud Integration", body: "Setup guides for Azure Quantum, AWS Braket, and IBM Quantum connectivity." },
           { title: "Security & Compliance", body: "Quantum-safe cryptography implementation and compliance documentation." },
@@ -444,7 +448,7 @@ export const PAGES: Record<string, ContentPage> = {
     kicker: "RESOURCES",
     title: "API Access",
     intro:
-      "API access to EDGEX's QML and cloud orchestration platforms is provisioned per client engagement, not self-serve — this keeps access scoped to contracted workloads and compliance requirements.",
+      "API access to algu's QML and cloud orchestration platforms is provisioned per client engagement, not self-serve — this keeps access scoped to contracted workloads and compliance requirements.",
     sections: [
       {
         heading: "Requesting access",
@@ -461,7 +465,7 @@ export const PAGES: Record<string, ContentPage> = {
     key: "whitepapers",
     kicker: "RESOURCES",
     title: "Whitepapers",
-    intro: "Technical perspectives from EDGEX's engineering and research teams.",
+    intro: "Technical perspectives from algu's engineering and research teams.",
     sections: [
       {
         heading: "Available whitepapers",
@@ -480,7 +484,7 @@ export const PAGES: Record<string, ContentPage> = {
     kicker: "RESOURCES",
     title: "Case Studies",
     intro:
-      "Illustrative engagement profiles showing how EDGEX's stack applies across industries. These are representative scenarios based on our service lines, not disclosures of specific client identities or results.",
+      "Illustrative engagement profiles showing how algu's stack applies across industries. These are representative scenarios based on our service lines, not disclosures of specific client identities or results.",
     sections: [
       {
         heading: "Representative engagements",
@@ -499,7 +503,7 @@ export const PAGES: Record<string, ContentPage> = {
     kicker: "RESOURCES",
     title: "Newsroom",
     intro:
-      "Company announcements and press coverage will be posted here as they're published. Media inquiries: edgex@algu.net.",
+      "Company announcements and press coverage will be posted here as they're published. Media inquiries: algu@algu.net.",
     sections: [],
   },
   learn: {
@@ -507,7 +511,7 @@ export const PAGES: Record<string, ContentPage> = {
     kicker: "LEARN",
     title: "Quantum ML & Research",
     intro:
-      "A working map of the quantum machine learning techniques EDGEX applies in client engagements — from foundational tutorials through the finance-specific models our Quantum Engagement research group builds on most often.",
+      "A working map of the quantum machine learning techniques algu applies in client engagements — from foundational tutorials through the finance-specific models our Quantum Engagement research group builds on most often.",
     sections: [
       {
         heading: "Applied Quantum ML",
@@ -515,8 +519,8 @@ export const PAGES: Record<string, ContentPage> = {
         items: [
           { title: "Quantum ML for Anomaly Detection", body: "Quantum kernel methods applied to flagging outliers in network telemetry, transaction streams, and sensor data at a resolution classical models miss." },
           { title: "Quantum Optimization", body: "QAOA-based approaches to combinatorial problems — routing, scheduling, allocation — where the feasible-solution space grows too fast for classical solvers." },
-          { title: "Practical QML Tutorials", body: "Hands-on walkthroughs for engineering teams onboarding onto EDGEX's QML Suite, from first circuit to a deployed hybrid pipeline." },
-          { title: "Finance-Oriented Quantum ML Examples", body: "Worked examples applying QML to pricing, fraud detection, and portfolio problems — the same techniques used in EDGEX's Financial Services engagements." },
+          { title: "Practical QML Tutorials", body: "Hands-on walkthroughs for engineering teams onboarding onto algu's QML Suite, from first circuit to a deployed hybrid pipeline." },
+          { title: "Finance-Oriented Quantum ML Examples", body: "Worked examples applying QML to pricing, fraud detection, and portfolio problems — the same techniques used in algu's Financial Services engagements." },
           { title: "Quantum ML for Complex Systems", body: "Modeling systems with many interacting variables — supply chains, grids, biological networks — where classical simulation struggles to scale." },
         ],
       },
@@ -546,31 +550,31 @@ export const FOOTER = {
     {
       heading: "Company",
       items: [
-        { label: "About ALGU Co.", route: "EdgexAbout" },
-        { label: "Leadership", route: "EdgexLeadership" },
-        { label: "Careers", route: "EdgexCareers" },
-        { label: "Legal Information", route: "EdgexLegal" },
-        { label: "Corporate Governance", route: "EdgexGovernance" },
+        { label: "About ALGU Co.", route: "alguAbout" },
+        { label: "Leadership", route: "alguLeadership" },
+        { label: "Careers", route: "alguCareers" },
+        { label: "Legal Information", route: "alguLegal" },
+        { label: "Corporate Governance", route: "alguGovernance" },
       ],
     },
     {
       heading: "Solutions",
       items: [
-        { label: "Quantum Machine Learning", route: "EdgexServices" },
-        { label: "Quantum Optimization", route: "EdgexServices" },
-        { label: "QPU Engineering", route: "EdgexProducts" },
-        { label: "Nuclear-Powered Data Centers", route: "EdgexProducts" },
-        { label: "Quantum Security", route: "EdgexServices" },
+        { label: "Quantum Machine Learning", route: "alguServices" },
+        { label: "Quantum Optimization", route: "alguServices" },
+        { label: "QPU Engineering", route: "alguProducts" },
+        { label: "Nuclear-Powered Data Centers", route: "alguProducts" },
+        { label: "Quantum Security", route: "alguServices" },
       ],
     },
     {
       heading: "Resources",
       items: [
-        { label: "Documentation", route: "EdgexDocumentation" },
-        { label: "API Access", route: "EdgexApiAccess" },
-        { label: "Whitepapers", route: "EdgexWhitepapers" },
-        { label: "Case Studies", route: "EdgexCaseStudies" },
-        { label: "Newsroom", route: "EdgexNewsroom" },
+        { label: "Documentation", route: "alguDocumentation" },
+        { label: "API Access", route: "alguApiAccess" },
+        { label: "Whitepapers", route: "alguWhitepapers" },
+        { label: "Case Studies", route: "alguCaseStudies" },
+        { label: "Newsroom", route: "alguNewsroom" },
       ],
     },
     {
@@ -584,5 +588,5 @@ export const FOOTER = {
       ],
     },
   ],
-  contactEmail: "edgex@algu.net",
+  contactEmail: "algu@algu.net",
 }

@@ -3,19 +3,19 @@ import { View } from "react-native"
 
 import { Text } from "@/components/Text"
 import {
-  EdgexCard,
-  EdgexDivider,
-  EdgexListRow,
-  EdgexSection,
-} from "@/components/edgex/EdgexPrimitives"
-import { EdgexIllustration, type EdgexIllustrationVariant } from "@/components/edgex/EdgexIllustration"
-import { EdgexScreenShell } from "@/components/edgex/EdgexScreenShell"
-import { PAGES } from "@/content/edgexContent"
+  AlguCard,
+  AlguDivider,
+  AlguListRow,
+  AlguSection,
+} from "@/components/algu/alguPrimitives"
+import { AlguIllustration, type AlguIllustrationVariant } from "@/components/algu/alguIllustration"
+import { AlguScreenShell } from "@/components/algu/alguScreenShell"
+import { PAGES } from "@/content/alguContent"
 import type { AppStackScreenProps } from "@/navigators/navigationTypes"
 import { useAppTheme } from "@/theme/context"
-import { edgex } from "@/theme/edgexPalette"
+import { algu } from "@/theme/alguPalette"
 
-const PAGE_KEY_TO_ILLUSTRATION: Record<string, EdgexIllustrationVariant> = {
+const PAGE_KEY_TO_ILLUSTRATION: Record<string, AlguIllustrationVariant> = {
   products: "products",
   services: "services",
   technologies: "technologies",
@@ -47,9 +47,9 @@ export const QuantomScreen: FC<QuantomScreenProps> = function QuantomScreen({
   if (!page) return null
 
   return (
-    <EdgexScreenShell currentRoute={route.name} onNavigate={(r) => navigation.navigate(r as never)}>
+    <AlguScreenShell currentRoute={route.name} onNavigate={(r) => navigation.navigate(r as never)}>
       <View style={{ paddingHorizontal: spacing.lg, paddingTop: spacing.xl }}>
-        <EdgexIllustration
+        <AlguIllustration
           variant={PAGE_KEY_TO_ILLUSTRATION[pageKey] ?? "products"}
           height={160}
           style={{ marginBottom: spacing.lg }}
@@ -58,7 +58,7 @@ export const QuantomScreen: FC<QuantomScreenProps> = function QuantomScreen({
           text={page.kicker}
           style={{
             fontFamily: typography.primary.medium,
-            color: edgex.signal,
+            color: algu.signal,
             fontSize: 12,
             letterSpacing: 2,
             marginBottom: spacing.sm,
@@ -68,7 +68,7 @@ export const QuantomScreen: FC<QuantomScreenProps> = function QuantomScreen({
           text={page.title}
           style={{
             fontFamily: typography.primary.bold,
-            color: edgex.text,
+            color: algu.text,
             fontSize: 32,
             lineHeight: 38,
             marginBottom: spacing.md,
@@ -76,14 +76,14 @@ export const QuantomScreen: FC<QuantomScreenProps> = function QuantomScreen({
         />
         <Text
           text={page.intro}
-          style={{ color: edgex.textDim, fontSize: 15, lineHeight: 23, marginBottom: spacing.lg }}
+          style={{ color: algu.textDim, fontSize: 15, lineHeight: 23, marginBottom: spacing.lg }}
         />
       </View>
 
       {page.sections.map((section, i) => (
         <View key={section.heading}>
-          {i > 0 ? <EdgexDivider label={section.heading.toUpperCase()} spacing={spacing.lg} /> : null}
-          <EdgexSection
+          {i > 0 ? <AlguDivider label={section.heading.toUpperCase()} spacing={spacing.lg} /> : null}
+          <AlguSection
             title={i === 0 ? section.heading : ""}
             spacing={spacing.lg}
             titleFontFamily={typography.primary.bold}
@@ -91,11 +91,11 @@ export const QuantomScreen: FC<QuantomScreenProps> = function QuantomScreen({
             {section.layout === "cards" ? (
               <View style={{ flexDirection: "row", flexWrap: "wrap", gap: spacing.sm }}>
                 {section.items.map((item) => (
-                  <EdgexCard
+                  <AlguCard
                     key={item.title}
                     title={item.title}
                     body={item.body}
-                    accentColor={edgex.teal}
+                    accentColor={algu.teal}
                     spacing={spacing.md}
                     titleFontFamily={typography.primary.medium}
                   />
@@ -103,19 +103,19 @@ export const QuantomScreen: FC<QuantomScreenProps> = function QuantomScreen({
               </View>
             ) : (
               section.items.map((item) => (
-                <EdgexListRow
+                <AlguListRow
                   key={item.title}
                   text={item.body ? `${item.title} — ${item.body}` : item.title}
-                  dotColor={edgex.signal}
+                  dotColor={algu.signal}
                   spacing={spacing.sm}
                 />
               ))
             )}
-          </EdgexSection>
+          </AlguSection>
         </View>
       ))}
 
       <View style={{ height: spacing.xxl }} />
-    </EdgexScreenShell>
+    </AlguScreenShell>
   )
 }

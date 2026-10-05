@@ -7,7 +7,7 @@ import {
 } from "@react-navigation/native"
 import { NativeStackScreenProps } from "@react-navigation/native-stack"
 
-import type { EdgexStackParamList } from "./edgexNavigationTypes"
+import type { AlguStackParamList } from "./alguNavigationTypes"
 
 // Demo Tab Navigator types
 export type DemoTabParamList = {
@@ -23,7 +23,7 @@ export type AppStackParamList = {
   Login: undefined
   Demo: NavigatorScreenParams<DemoTabParamList>
   Quantom: undefined
-  Edgex: NavigatorScreenParams<EdgexStackParamList>
+  algu: NavigatorScreenParams<AlguStackParamList>
   // 🔥 Your screens go here
   // IGNITE_GENERATOR_ANCHOR_APP_STACK_PARAM_LIST
 }

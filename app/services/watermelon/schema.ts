@@ -1,8 +1,8 @@
 import { appSchema, tableSchema } from "@nozbe/watermelondb"
 
-// Mirrors sql/edgex_schema.sql on the Supabase side — keep both in sync
+// Mirrors sql/algu_schema.sql on the Supabase side — keep both in sync
 // when you change columns.
-export const edgexSchema = appSchema({
+export const alguSchema = appSchema({
   version: 3,
   tables: [
     tableSchema({

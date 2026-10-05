@@ -1,6 +1,6 @@
 import { addColumns, schemaMigrations } from "@nozbe/watermelondb/Schema/migrations"
 
-export const edgexMigrations = schemaMigrations({
+export const alguMigrations = schemaMigrations({
   migrations: [
     {
       toVersion: 2,

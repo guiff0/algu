@@ -1,6 +1,6 @@
 import { Q } from "@nozbe/watermelondb"
 
-import { SEED_JOBS, type Job, type JobField, type JobLocation, type JobRole } from "@/content/edgexJobs"
+import { SEED_JOBS, type Job, type JobField, type JobLocation, type JobRole } from "@/content/alguJobs"
 import { isSupabaseConfigured, supabase } from "@/services/supabase/client"
 
 import { database } from "./database"
